@@ -17,13 +17,16 @@ Ein Produkt mit dem Handy scannen und seine Lieferkette sehen: Stationen von der
 - Fehlende Angaben werden als Lücke gezeigt, nicht aufgefüllt. Die Lücken sind Teil der Aussage.
 - Demo-Produktpässe (etwa nach dem Battery-Pass-Datenmodell) tragen sichtbar das Label "Beispieldaten".
 
-## Technik (Vorschlag, in SPEC.md final festlegen)
+## Technik
 
-- Next.js (TypeScript) als installierbare Web-App (PWA), Hosting auf Vercel
-- Scannen im Browser (Barcode/EAN und QR mit GS1 Digital Link)
-- Karte: MapLibre GL, Geocoding über einen offenen Dienst mit Caching
-- Datenquellen: Open Food Facts API, GS1 Digital Link, Battery-Pass-Datenmodell, optional Open Supply Hub
-- Optional: Claude API, um unstrukturierte Herkunftsangaben einzuordnen. Ergebnis immer als "KI-Einordnung" markieren.
+Verbindlich festgelegt in [docs/SPEC.md](docs/SPEC.md) (Projektname OpenTrace, URL opentrace-scan.vercel.app). Kurzfassung:
+
+- Next.js (App Router, TypeScript) + Tailwind als installierbare Web-App (PWA), Hosting auf Vercel
+- Scannen im Browser mit `barcode-detector` (EAN und QR mit GS1 Digital Link)
+- Karte: MapLibre GL mit OpenFreeMap, Geocoding über Ländertabelle und Nominatim mit Cache
+- Datenquellen: Open Food Facts API, GS1 Digital Link, Battery-Pass-Datenmodell v1.2.0
+- Schnittstelle für alle Agenten: `lib/types.ts` nach SPEC.md Abschnitt 5
+- Claude API (KI-Einordnung) erst nach dem MVP, siehe SPEC.md Backlog. Ergebnis immer als "KI-Einordnung" markieren.
 - Keine API-Schlüssel ins Repo. Schlüssel nur in `.env.local`, die in `.gitignore` steht.
 
 ## Arbeiten mit Herdr

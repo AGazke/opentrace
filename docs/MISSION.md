@@ -24,6 +24,8 @@ Nebenziel: ein vorzeigbares, öffentlich gehostetes Projekt für Adrians Bewerbu
 
 ## Offene Fragen für das SPEC-Interview
 
+Beantwortet am 18.11.2026, Ergebnisse in [SPEC.md](SPEC.md).
+
 - Zielgruppe der Seite: Recruiter, Interessierte, beides? Sprache DE, EN oder beides?
 - Welche Annahmen zum Transportmittel, wenn die Daten keine nennen?
 - Wie genau wird der Transparenz-Score berechnet (Felder, Gewichtung)?
