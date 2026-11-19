@@ -2,7 +2,7 @@
 
 Scan a product with your phone and see its supply chain: stations on a map, estimated transport CO₂ and a transparency score that shows what the manufacturer discloses and what is missing.
 
-Work in progress. Specification: [docs/SPEC.md](docs/SPEC.md) (German).
+Live: https://opentrace-scan.vercel.app (work in progress). Specification: [docs/SPEC.md](docs/SPEC.md) (German).
 
 ## Development
 
