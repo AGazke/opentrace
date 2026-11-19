@@ -65,6 +65,7 @@ SupplyChain ──► Karte (MapLibre + OpenFreeMap), Abschnitte, Score
 - **Warum der Proxy?** Der Server setzt den User-Agent, bündelt Anfragen im Cache und schützt so das Rate-Limit von Open Food Facts.
 - **Warum läuft die Kette im Browser?** Der Nutzerstandort verlässt nie das Gerät. Die Logik ist rein funktional und dadurch leicht zu testen.
 - **`/api/geocode?q=...`:** fragt Nominatim nur für Ortsnamen aus `manufacturing_places`, höchstens 1 Anfrage pro Sekunde, Ergebnis 30 Tage im Data Cache. Länder brauchen keinen API-Aufruf.
+- **User-Agent (OFF und Nominatim):** `OpenTrace/0.1 (https://github.com/AGazke/opentrace)`, festgelegt am 19.11.2026. Konstante in `lib/config.ts`, keine private Adresse.
 - **Kein Datenbank-Server, keine Nutzerdaten, keine API-Schlüssel.**
 
 ### Routen
@@ -282,7 +283,6 @@ Regel: Kein Paket ändert `lib/types.ts` im eigenen Branch. Änderungswünsche g
 
 ## 16. Offene Punkte
 
-- Kontaktangabe für den Open-Food-Facts-User-Agent: Adrian legt eine Projektadresse oder die Repo-URL fest. Keine private Adresse im Repo.
 - GLEC-Faktoren und Umwegfaktoren aus dem Original-PDF übernehmen (M3).
 - Termine Batteriepass und ESPR gegen EUR-Lex prüfen (vor M5).
 - Drei Beispielprodukte auswählen (M1).
